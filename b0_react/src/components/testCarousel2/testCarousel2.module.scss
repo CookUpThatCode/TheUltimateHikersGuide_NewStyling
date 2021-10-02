@@ -1,0 +1,159 @@
+// .carouselBox {
+//    position: relative;
+//    width: 100%;
+//    // height: 50rem;
+//    border: 14px solid aqua;
+// }
+
+.scroller {
+   position: relative;
+   // position: absolute;
+   // width: 100%;
+   // height: 100%;
+   // border: 2px solid purple;
+}
+
+.scrollLeft { 
+   animation: toTheLeft .5s ease-out forwards;
+}
+@keyframes toTheLeft {
+   from {left: 0;}
+   to {left: calc(100% + 1.2rem);}
+   // to {left: calc(100% - 1.2rem);}
+}
+
+.scrollRight { 
+   animation: toTheRight .5s ease-out forwards;
+}
+@keyframes toTheRight {
+   from {left: 0;}
+   to {left: calc(-100% - 1.2rem);}
+   // to {left: calc(-100% + 1.2rem);}
+}
+
+.carFlex {
+   display: flex;
+   // position: relative;
+   position: absolute;
+   width: 100%;
+   // height: 26rem;
+   // height: 100%;
+   // z-index: -5;
+   // border: 2px solid red;
+   // border: 2px solid green;
+}
+
+.dummyFlex {
+   display: flex;
+   // position: relative;
+   width: 100%;
+   z-index: -5;
+   // height: 26rem;
+   // height: 100%;
+   // z-index: -5;
+   // border: 2px solid red;
+   // border: 2px solid green;
+}
+
+// .carItem {
+//    width: 28%;
+//    // border: .4rem;
+//    background: blue;
+//    border: 3px solid black;
+//    font-size: 5rem;
+//    text-align: center;
+//    padding-top: .8rem;
+// }
+.carItem {
+   flex: 1;
+   margin: 0 1.2rem 0 0;
+   // width: 28%;
+   // background: green;
+   // border: 3px solid black;
+   font-size: 5rem;
+   text-align: center;
+   // padding-top: .8rem;
+
+   &:last-child {
+      margin-right: 0;
+   }
+   // &:first-child {
+   //    margin-left: 1.2rem;
+   // }
+}
+
+.dummyCardContainer { 
+   width: 100%;
+   // flex: 1;
+   // width: 16rem; /* pick whatever width you want. this will be defined by a flex container */
+   // margin: auto;
+}
+
+.dummyCardContainer .dummyWidthScaler {
+   width: 100%;
+   padding-top: 152.5%; /* defines aspect ratio */
+   position: relative;
+   // border: 2px solid orange;
+}
+
+.button {
+   position: absolute;
+   top: 42%;
+   z-index: 50;
+   width: 3rem;
+   height: 3rem;
+   color: yellow;
+   font-weight: bold;
+   font-size: 3rem;
+   padding-bottom: .4rem;
+   cursor: pointer;
+
+   &:hover {
+      font-size: 3.5rem;
+      padding-left: .2rem;
+   }
+   // border: 4px solid purple;
+
+}
+.buttonL {
+   left: -4vw;
+   padding-left: .4rem;
+}
+.buttonR {
+   right: -4vw;
+   padding-left: .4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .container { 
+//    width: 500px; /* pick whatever width you want */
+// }
+// .container .outer {
+//    width: 100%;
+//    padding-top: 75%; /* defines aspect ratio */
+//    position: relative;
+// }
+// .container .outer .inner {
+//    position: absolute;
+//    top: 0;
+//    left: 0;
+//    right: 0;
+//    bottom: 0;
+//    border: 2px solid green;
+// }
+
+

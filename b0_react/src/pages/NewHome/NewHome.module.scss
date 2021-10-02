@@ -1,0 +1,61 @@
+.bg {
+   background: url('./uhgBG.jpg') no-repeat center;
+   background-size: cover;
+   height: 100vh;
+   position: relative;
+}
+
+.leftContainer {
+   position: absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 95vw;
+   overflow: hidden;
+   // border: 1px solid green;
+} 
+.rightContainer {
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 95vw;
+   overflow: hidden;
+   // border: 1px solid green;
+}
+
+.leftCover {
+   position: absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   width: 100vw;
+   z-index: 5;
+   background: url('./uhgBG.jpg') no-repeat center;
+   background-size: cover;
+}
+.rightCover {
+   position: absolute;
+   top: 0;
+   left: -95vw;
+   bottom: 0;
+   width: 100vw;
+   z-index: 5;
+   background: url('./uhgBG.jpg') no-repeat center;
+   background-size: cover;
+}
+
+.navBar {
+   width: 90vw;
+   margin: auto;
+   height: 5rem;
+}
+
+.carouselContainer {
+   // border: 2px solid green;
+   width: 90vw;
+   // margin: auto;
+   margin: 30vh auto;
+   // min-height: 5rem;
+   position: relative;
+}

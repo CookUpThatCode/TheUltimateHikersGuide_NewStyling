@@ -1,0 +1,69 @@
+.carouselBox {
+   position: relative;
+   width: 100%;
+   height: 10rem;
+   border: 14px solid aqua;
+}
+
+.scroller {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+}
+
+.scrollLeft { 
+   animation: toTheLeft .5s ease-out forwards;
+}
+@keyframes toTheLeft {
+   from {left: 0;}
+   to {left: 96%;}
+}
+
+.scrollRight { 
+   animation: toTheRight .5s ease-out forwards;
+}
+@keyframes toTheRight {
+   from {left: 0;}
+   to {left: -96%;}
+}
+
+.carFlex {
+   display: flex;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   z-index: -5;
+}
+
+.carItem {
+   width: 28%;
+   // border: .4rem;
+   background: blue;
+   border: 3px solid black;
+   font-size: 5rem;
+   text-align: center;
+   padding-top: .8rem;
+}
+
+.carSpace {
+   width: 4%;
+}
+
+.container { 
+   width: 500px; /* pick whatever width you want */
+}
+.container .outer {
+   width: 100%;
+   padding-top: 75%; /* defines aspect ratio */
+   position: relative;
+}
+.container .outer .inner {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   border: 2px solid green;
+}
+
+

@@ -1,0 +1,162 @@
+// .wrapper {
+//    padding: .25rem 0;
+//    background: rgb(236, 229, 229);
+//    width: 16.5rem;
+//    border-radius: 4px;
+// }
+
+.container { 
+   width: 16rem; /* pick whatever width you want */
+   margin: auto;
+}
+
+.container .outer {
+   width: 100%;
+   padding-top: 152.5%; /* defines aspect ratio */
+   position: relative;
+}
+
+.container .outer .contentContainer {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0rem;
+   z-index: 2;
+
+   &:hover {
+      transform: scale(1.015);
+      transition: transform .04s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+   }
+
+   &:hover .imageBorder {
+      transform: scale(1.065);
+      width: 102%;
+      margin-left: -1%;
+      box-shadow: 1rem 1rem 1.33rem rgb(34, 34, 34);
+      transition: 
+         width .14s cubic-bezier(0.25, 0.45, 0.45, 0.95),
+         margin-left .14s cubic-bezier(0.25, 0.45, 0.45, 0.95),
+         transform .14s cubic-bezier(0.25, 0.45, 0.45, 0.95),
+         box-shadow .07s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      border-radius: 8px;
+      
+      // transition: width .14s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      // transition: margin-left .14s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      // transition: box-shadow .07s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+   }
+
+   &:hover .imageContainer {
+      transform: scale(1.1);
+      transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95) .1s;
+   }
+
+   &:hover + .inner {
+      transform: scale(1.03);
+      box-shadow: .6rem .6rem 1rem rgb(66, 66, 66);
+      transition: transform .04s cubic-bezier(0.25, 0.45, 0.45, 0.95),
+         box-shadow .04s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      // transition: box-shadow .04s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+   }
+
+   &:hover .title {
+      text-shadow: -.04ex 0 black, .04ex 0 black, .25rem .25rem .36rem rgb(160, 160, 160);
+      transition: text-shadow .04s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+   }
+
+   &:hover .image {
+      opacity: .45;
+      transition: opacity .1s;
+   }
+}
+
+.container .outer .inner {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: rgb(236, 229, 229);
+   z-index: 1;
+   border-radius: 8px;
+   // border: 2px solid rgb(214, 214, 214);
+}
+
+.title {
+   padding: 1rem .9rem 1.1rem .9rem;
+   font-size: 1.6rem;
+   text-shadow: -.01ex 0 black, .01ex 0 black;
+   letter-spacing: .02ex;
+}
+
+.description {
+   padding: .9rem .9rem 0rem .9rem;
+   height: 6.7rem;
+   font-size: 1rem;
+   overflow: hidden;
+}
+
+.imageBorder {
+   position: relative;
+   width: 96%;
+   margin: auto;
+   height: 13rem;
+   overflow: hidden;
+}
+
+.imageContainer {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   background: rgb(236, 229, 229);
+}
+
+.image {
+   position: absolute;
+   width: 18rem;
+   margin-left: -1rem;
+   height: 100%;
+   background-image: url("../../images/trail.jpg");
+   background-position: center;
+}
+
+.ellipsis {
+   position: absolute;
+   bottom: .75rem;
+   right: .6rem;
+   background: rgb(236, 229, 229);
+   width: 5.4rem;
+   text-align: right;
+   padding-right: .6rem;
+   padding-bottom: .35rem;
+   font-size: 1.2rem;
+   line-height: .85rem;
+   font-weight: bold;
+   letter-spacing: .1ex;
+   background: linear-gradient(to left, rgb(236, 229, 229) 50%, rgba(255, 255, 255, 0));
+}
+
+// .tagsContainer {
+//    position: absolute;
+//    z-index: 100;
+//    top: 0;
+//    right: 0;
+//    bottom: 0;
+//    left: 84%;
+//    border: 1px solid black;
+// }
+
+// .tag {
+//    background: cyan;
+//    text-align: right;
+//    border-radius: 4px;
+//    // overflow: hidden;
+//    animation: tagEnter 2s forwards;
+// }
+
+// @keyframes tagEnter {
+//    from {padding: 0;}
+//    to {padding: 0 .6rem;}
+// }
+
+

@@ -1,0 +1,187 @@
+// .cardContainer { 
+//    width: 100%;
+//    // flex: 1;
+//    // width: 16rem; /* pick whatever width you want. this will be defined by a flex container */
+//    // margin: auto;
+// }
+
+.widthScaler {
+   width: 100%;
+   padding-top: 152.5%; /* defines aspect ratio */
+   position: relative;
+   // border: 2px solid orange;
+}
+
+.contentContainer {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+
+   &:hover {
+      z-index: 10;
+   }
+
+   &:hover .textContainer {
+      transform: scale(1.015);
+      transition: transform .04s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+   }
+
+   &:hover .imageBorder {
+      transform: scale(1.065);
+      width: 102%;
+      left: -1%;
+      box-shadow: 1rem 1rem 1.33rem rgb(34, 34, 34);
+      transition: 
+         width .14s cubic-bezier(0.25, 0.45, 0.45, 0.95),
+         left .14s cubic-bezier(0.25, 0.45, 0.45, 0.95),
+         transform .14s cubic-bezier(0.25, 0.45, 0.45, 0.95),
+         box-shadow .07s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      border-radius: 8px;
+   }
+
+   &:hover .imageContainer {
+      transform: scale(1.11);
+      transition: transform 6.5s cubic-bezier(0.25, 0.45, 0.45, 0.95) .1s;
+   }
+
+   &:hover .cardBackground {
+      transform: scale(1.03);
+      box-shadow: .6rem .6rem 1rem rgb(66, 66, 66);
+      transition: 
+         transform .04s cubic-bezier(0.25, 0.45, 0.45, 0.95),
+         box-shadow .04s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+   }
+
+   &:hover .title {
+      text-shadow: -.04ex 0 black, .04ex 0 black, .25rem .25rem .36rem rgb(160, 160, 160);
+      transition: text-shadow .04s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+   }
+
+   &:hover .image {
+      opacity: .45;
+      background-size: cover;
+      // background-size: 132%;
+      transition: opacity .1s, background-size .14s;
+   }
+
+   &:hover .tagsContainer {
+      width: 6rem;
+      right: -1rem;
+      transition: width .4s .2s, right .4s .2s;
+   }
+}
+
+.textContainer {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 2;
+}
+
+.cardBackground {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: rgb(236, 229, 229);
+   z-index: 1;
+   border-radius: 8px;
+}
+
+.title {
+   height: 17%;
+   padding: 1rem .9rem 0 .9rem;
+   font-size: 1.6rem;
+   text-shadow: -.01ex 0 black, .01ex 0 black;
+   letter-spacing: .02ex;
+}
+
+.description {
+   height: 27.5%;
+   padding: .9rem .9rem 0rem .9rem;
+   font-size: 1rem;
+   overflow: hidden;
+}
+
+.imageBorder {
+   height: 52.5%;
+   position: relative;
+   width: 96%;
+   overflow: hidden;
+   left: 2%;
+}
+
+.imageContainer {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   background: rgb(236, 229, 229);
+}
+
+.image {
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   background-image: url("../../images/trail.jpg");
+   background-position: center;
+   background-size: cover;
+   // background-size: 140%;
+}
+
+.ellipsis {
+   position: absolute;
+   bottom: 3%;
+   right: 4%;
+   background: rgb(236, 229, 229);
+   width: 33.5%;
+   text-align: right;
+   padding-right: .6rem;
+   padding-bottom: .35rem;
+   font-size: 1.2rem;
+   line-height: .85rem;
+   font-weight: bold;
+   letter-spacing: .1ex;
+   background: linear-gradient(to left, rgb(236, 229, 229) 50%, rgba(255, 255, 255, 0));
+}
+
+.tagsContainer {
+   // border: 1px solid purple;
+   position: absolute;
+   top: 3rem;
+   right: 5rem;
+   bottom: 4rem;
+   // width: 6rem;
+   z-index: 10;
+   overflow: hidden;
+   width: 0;
+}
+
+.tagsWidth {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   width: 6rem;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   // border: 2px solid green;
+}
+
+
+.tag {
+   margin-top: 1rem;
+   background: blue;
+   padding: .3rem .6rem;
+   border-radius: .5rem;
+   font-size: 1rem;
+
+   &:first-child {
+      margin-top: 0;
+   }
+}

@@ -1,0 +1,32 @@
+.bigContainer {
+   position: relative;
+}
+
+.containurrFlex {
+   border: 2px solid purple;
+   display: flex;
+}
+
+.test {
+   height: 10rem;
+   background: green;
+   animation: mymove 4s forwards ease-out;
+}
+@keyframes mymove {
+   from {flex: 0;}
+   to {flex: 1;}
+}
+
+.test2 {
+   flex: 1;
+   height: 10rem;
+   background: red;
+   z-index: 5;
+}
+
+.menuText {
+   position: absolute;
+   height: 100%;
+   border: 2px solid yellowgreen;
+   padding: 4rem 0 0 2rem;
+}

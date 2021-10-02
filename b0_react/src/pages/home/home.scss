@@ -1,0 +1,104 @@
+@import '../../App.scss';
+
+.homeGrid {
+   display: grid;
+   border: 2px solid green;
+   margin: 0 .4rem;
+   grid-gap: .6rem;
+   padding: .6rem;
+}
+
+@media only screen and (max-width: 560px) {
+   .homeGrid {
+      background-color: red;
+      grid-template-areas: 
+         'a'
+         'c'
+         'c'
+         'c'
+         'c'
+         'b'
+         'b'
+         'b'
+         'b'
+         'b'
+         'b'
+         'b';
+      /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+      grid-template-columns: 1fr;
+   }
+   .purple {
+      height: 5rem;
+   }
+}
+@media only screen and (min-width: 561px) and (max-width: 912px) {
+   .homeGrid {
+      background-color: orange;
+      grid-template-areas: 
+         'a a'
+         'a a'
+         'b c'
+         'b c'
+         'b c'
+         'b c';
+      /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; */
+      grid-template-columns: 1fr 1fr;
+   }
+   .purple {
+      height: 22rem;
+   }
+}
+@media only screen and (min-width: 913px) and (max-width: 1324px) {
+   .homeGrid {
+      background-color: yellow;
+      grid-template-areas: 
+         'a a a'
+         'a a a'
+         'c c b'
+         'c c b';
+      /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+      grid-template-columns: 1fr 1fr 1fr;
+   }
+   .purple {
+      height: 10.8rem;
+   }
+}
+@media only screen and (min-width: 1325px) {
+   .homeGrid {
+      background-color: $green-900;
+      /* background-color: blue; */
+      grid-template-areas: 
+         'c c a a'
+         'c c a a'
+         'b b b b';
+      /* grid-template-rows: 1fr 1fr 1fr; */
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+   }
+   .purple {
+      height: 10.8rem;
+   }
+}
+
+.gridItem {
+   border: 1px solid black;
+   height: 5rem;
+}
+
+.purple {
+   grid-area: c;
+   border: 3px solid purple;
+   overflow: hidden;
+   /* height: 10rem; */
+}
+
+/* .gridItemA {
+   grid-area: a;
+}
+
+.gridItemB {
+   grid-area: b;
+}
+
+.gridItemD {
+   grid-area: d;
+} */

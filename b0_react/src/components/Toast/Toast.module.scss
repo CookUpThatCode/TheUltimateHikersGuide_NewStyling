@@ -1,0 +1,98 @@
+.toastContainer {
+    position: relative;
+    flex: 0 0 5rem;
+    margin-top: 1rem;
+}
+
+.toastContainerEnter {
+    animation: toastEntrance .75s forwards, slideUpAuto .35s forwards 7.5s;
+}
+@keyframes toastEntrance {
+    from {margin-top: 7rem;}
+    to {margin-top: 1rem;}
+}
+@keyframes slideUpAuto {
+    from {flex: 0 0 5rem; margin-top: 1rem;}
+    to {flex: 0 0 0; margin-top: 0;}
+}
+
+.toastContainerExit {
+    animation: slideUpClick .35s forwards .75s;
+}
+@keyframes slideUpClick {
+    from {flex: 0 0 5rem; margin-top: 1rem;}
+    to {flex: 0 0 0; margin-top: 0;}
+}
+
+.toast {
+    position: absolute;
+    border-radius: 2px;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(155, 79, 79, 1); 
+}
+
+.toastEnter {
+    animation: enter .75s forwards, exitAuto .75s forwards 6.75s;
+}
+@keyframes enter {
+    from {top: 2rem; bottom: 2rem; right: -4rem; left: 16rem; background-color: rgba(155, 79, 79, 0);}
+    to {top: 0rem; bottom: 0rem; right: 0rem; left: 0rem; background-color: rgba(155, 79, 79, 1);}
+}
+@keyframes exitAuto {
+    from {top: 0rem; bottom: 0rem; right: 0rem; left: 0rem; background-color: rgba(155, 79, 79, 1);}
+    to {top: 2rem; bottom: 2rem; right: 6rem; left: 6rem; background-color: rgba(155, 79, 79, 0);}
+}
+
+.toastExit {
+    animation: exitClick .75s forwards;
+}
+@keyframes exitClick {
+    from {top: 0rem; bottom: 0rem; right: 0rem; left: 0rem; background-color: rgba(155, 79, 79, 1);}
+    to {top: 2rem; bottom: 2rem; right: 6rem; left: 6rem; background-color: rgba(155, 79, 79, 0);}
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: .6rem;
+    color: rgba(0,0,0,0);
+}
+
+.contentEnter {
+    animation: contentEnter .75s forwards, textAppear .75s forwards .25s, contentExitAuto .75s forwards 6.75s, textFadeAuto .4s forwards 6.75s;
+}
+@keyframes contentEnter {
+    from {top: -2rem; bottom: -2rem; right: -6rem; left: -6rem;}
+    to {top: 0rem; bottom: 0rem; right: 0rem; left: 0rem;}
+}
+@keyframes textAppear {
+    from {color: rgba(0,0,0,0);}
+    to {color: rgba(0,0,0,1);}
+}
+@keyframes contentExitAuto {
+    from {top: 0; bottom: 0; left: 0; right: 0;}
+    to {top: -2rem; bottom: -2rem; left: -6rem; right: -6rem;}
+} 
+@keyframes textFadeAuto {
+    from {color: rgba(0,0,0,1);}
+    to {color: rgba(0,0,0,0);}
+} 
+
+.contentExit {
+    animation: contentExitClick .75s forwards, textFadeClick .4s forwards;
+}
+@keyframes contentExitClick {
+    from {top: 0; bottom: 0; left: 0; right: 0;}
+    to {top: -2rem; bottom: -2rem; left: -6rem; right: -6rem;}
+} 
+@keyframes textFadeClick {
+    from {color: rgba(0,0,0,1);}
+    to {color: rgba(0,0,0,0);}
+} 
