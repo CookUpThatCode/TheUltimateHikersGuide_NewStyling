@@ -8,7 +8,7 @@ const Toaster = () => {
    const [toast, setToast] = useState([])
 
    const addToast = () => {
-      setToast(toast.concat(<Toast key={toast.length} message="Error. Here is the error message, you fool! You fucked it up good this time" />))
+      setToast(toast.concat(<Toast key={toast.length} message="Error. Here is the error message. Try again." />))
    }
 
    return (
